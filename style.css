@@ -40,9 +40,25 @@ body{
     margin-bottom: 10px;
     text-align: center;
     color: white;
-    padding: 40px;
+    padding-top: 20px;
     font-weight: 400;
-    font-size : 40px;
+    font-size : 60px;
+}
+
+#p1 , #p2 , #p3{
+    border-top: 0px;
+}
+
+#p1 , #p4 ,#p7{
+    border-left: 0px;
+}
+
+#p7 , #p8 ,#p9 {
+    border-bottom: 0px;
+}
+
+#p3 , #p6 ,#p9 {
+    border-right: 0px;
 }
 
 .plase:hover{

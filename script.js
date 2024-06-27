@@ -21,10 +21,20 @@ function win(winn,num1,num2,num3){
     num1 = "p"+num1;
     num2 = "p"+num2;
     num3 = "p"+num3;
-    document.getElementById(num1).style.backgroundColor = "gold";
-    document.getElementById(num2).style.backgroundColor = "gold";
-    document.getElementById(num3).style.backgroundColor = "gold";
-    Reload();
+    if(winn === "O" ){
+        document.getElementById(num1).style.backgroundColor = "gold";
+        document.getElementById(num2).style.backgroundColor = "gold";
+        document.getElementById(num3).style.backgroundColor = "gold";
+        bord.style.color = "red";
+        }
+        else{ 
+            document.getElementById(num1).style.backgroundColor = "silver";
+            document.getElementById(num2).style.backgroundColor = "silver";
+            document.getElementById(num3).style.backgroundColor = "silver";
+            bord.style.backgroundColor = "silver";
+            bord.style.color = "brown";
+        }
+        Reload();
 }
 
 function winner() {
@@ -75,6 +85,7 @@ function clic(num1){
         document.getElementById("p"+num1).innerText = charPlayer;
         charPlayer = charPlayer==="X" ? "O" : "X" ;
     }
+    bord.innerText = charPlayer ;
     winner();
 }
 
