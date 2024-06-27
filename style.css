@@ -1,0 +1,59 @@
+*{
+    transition-duration: .5s;
+}
+body{
+    background: linear-gradient(black 40%,rgb(1, 1, 185) );
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game{
+    width: 90%;
+    height: 90%;
+    background:rgba(255, 255, 255, .05);
+    display: grid;
+    grid-template-columns: repeat(3,30%);
+    grid-template-rows: repeat(4,25%);
+    justify-content: center;
+    align-content: center;
+
+}
+
+.plase{
+    background-color: transparent;
+    border-color: white;
+    border-style: solid;
+    border-width: 2px;
+    color: red;
+    font-size: 80px;
+    text-align: center;
+   
+}
+#bord{
+    grid-row: 1;
+    grid-column: 1/4;
+    border-color: white;
+    border-style: solid;
+    border-width: 2px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: white;
+    padding: 40px;
+    font-weight: 400;
+    font-size : 40px;
+}
+
+.plase:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+    transition-duration: .3s;
+}
+
+@media (min-width:600px) {
+    .game{
+        height: 90%;
+        grid-template-columns: repeat(3,120px);
+        grid-template-rows: repeat(4,120px);
+    }
+}
